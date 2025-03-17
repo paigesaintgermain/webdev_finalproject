@@ -32,18 +32,21 @@ function showOption(option) {
 
 function selectOption(option) {
     const nextTextNodeId = option.nextText
+    if (nextTextNodeId <= 0) {
+      return startGame()
+    }
     state = Object.assign(state, option.setState)
     showTextNode(nextTextNodeId)
-}
+  }
 
 const textNodes = [
     { 
     id: 1,
-    text: "Welcome to Rusty Spur, partner. You're the new sheriff in town and you've got a big job ahead of you. Word around the watering hole is the notorious outlaw, One-Eyed-Bill is now wanted for MURDER! Poster's with his face - well half his face - are plastered all over town and townsfolk are counting on you to bring him to justice. Are you up for the challenge?",
+    text: "Welcome to Rusty Spur, partner. You're the new sheriff in town and you've got a big job ahead of you. Word around the watering hole is the notorious outlaw, One-Eyed-Bill is now wanted for MURDER! Posters with his face - well half his face - are plastered all over town and townsfolk are counting on you to bring him to justice. Are you up for the challenge?",
     options: [
         {
-            text: " I accept the Challenge.",
-            //setState: { sheriffBadge: true},
+            text: "I accept the Challenge.",
+            //setState: { sheriffBadge: true },// 
             nextText: 2
         },
         {
@@ -54,7 +57,7 @@ const textNodes = [
     },
     {
         id: 2,
-        text: "You start your investigation at the Rusty Spur Saloon, where rumors fly faster than a tumbleweed in a dust storm. As you step inside, the chatter dies down, and all eyes turn to you. A nervous bartender polishes a glass and says, “Sheriff, I heard One-Eyed Bill was seen near the Gold Mine. But old Gus over there swears he spotted him sneaking into the General Store. What do you do?",
+        text: "You begin your investigation at the Rusty Spur Saloon, where rumors fly faster than a tumbleweed in a dust storm. As you step inside, the chatter dies down, and all eyes turn to you. A nervous bartender polishes a glass and says: Sheriff, I heard One-Eyed-Bill was seen near the old Gold Mine. But Dusty the Dillo over there swears he spotted him sneaking into the General Store. Where do you go?",
         options: [
             {
                 text: "Head to the Mine.",
@@ -63,7 +66,9 @@ const textNodes = [
                 nextText: 4
             },
             {
-                text: "Investigate the General Store.", 
+                text: "Investigate the General Store.",
+                //requiredState: (currentState) => currentState.sheriffBadge,//
+                //setState: { sheriffBadge: false, horse: true },// 
                 nextText: 5
             },
         ]
@@ -73,14 +78,14 @@ const textNodes = [
         text: "There's no room for cowards in these parts.",
         options: [
             {
-                text: "End game.",
-                //requiredState: (currentState) => currentState.sheriffBadge, 
-                //setState:  { sheriffBadge: false, wantedPoster: true },
-                nextText: 3
-            },
-            
+              text: "You just yee'd your last haw buddy.",
+              nextText: -1
+            }
         ]
     },
+
+    //you are here//
+
     {
         id: 4,
         text: "The sun beats down as you ride out to the abandoned Gold Mine. As you approach, you hear the sound of rocks tumbling—someone is inside! You dismount and creep closer when suddenly a shadow darts deeper into the mine. What do you do?",
@@ -112,8 +117,8 @@ const textNodes = [
                 nextText: 9
             },
         ]
-    },
-    
+    },  
 ]
+
 
 startGame()
