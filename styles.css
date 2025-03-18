@@ -1,6 +1,6 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded;
+    font-family: Baskervville;
 }
 
 body {
@@ -11,16 +11,36 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: blanchedalmond;
+    background-image: url("images/background.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
 }
+
+    a{
+        font-size: 48px;
+        color: #000;
+        margin: 0px;
+        text-align: center !important;
+        display: table-cell;
+        vertical-align: middle;
+        text-decoration: none;
+      }
+      
 
 .container {
     width: 800px;
     max-width: 80%;
     background-color: white;
-    padding: 10px;
+    padding: 50px;
     border-radius: 5px;
-    box-shadow: 0 0 20px 2px;
+    /* box-shadow: 0 0 20px 2px; */ 
+    transition-property: background-color;
+    transition-duration: .6s;
+    transition-timing-function: linear;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .6s;
+    -webkit-transition-timing-function: linear; 
 }
 
 .btn-grid {
@@ -31,13 +51,33 @@ body {
 }
 
 .btn {
-    background-color: blanchedalmond;
-    color: black;
-    border: 1px solid blanchedalmond(30%);
-    border-radius: 5px;
-    padding: 5px 10px;
-    outline: none;
-}
+    border: 2px solid #ffffff;
+    padding: 1em 2em;
+    display: inline-block;
+    border-radius: 50px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    opacity: 0.8;
+    transition-property: background-color, opacity, letter-spacing;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+    -webkit-transition-property: background-color, opacity, letter-spacing;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-timing-function: linear; 
+  }
+
+  .btn:hover {
+    background-color: rgba(255,255,255,0.15);
+    opacity: 1;
+    letter-spacing: 0.2em;
+  }
+
 
 .btn:hover {
     border-color: black;
