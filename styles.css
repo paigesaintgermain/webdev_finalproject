@@ -17,14 +17,13 @@ body {
     background-position: center center; 
 }
 
-    a{
-        font-size: 48px;
-        color: #000;
+a::btn {
+        font-size: 30px;
+        color: #cf977b;
         margin: 0px;
-        text-align: center !important;
         display: table-cell;
-        vertical-align: middle;
-        text-decoration: none;
+        vertical-align: left;
+        text-decoration: uppercase;
       }
       
 
@@ -32,15 +31,20 @@ body {
     width: 800px;
     max-width: 80%;
     background-color: white;
-    padding: 50px;
+    padding: 40px;
+    padding-bottom: 20px;
     border-radius: 5px;
-    /* box-shadow: 0 0 20px 2px; */ 
+    box-shadow: 0 0 20px 2px #fbdecb; 
     transition-property: background-color;
     transition-duration: .6s;
     transition-timing-function: linear;
     -webkit-transition-property: background-color;
     -webkit-transition-duration: .6s;
     -webkit-transition-timing-function: linear; 
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    line-height: 1.8;
 }
 
 .btn-grid {
@@ -58,7 +62,7 @@ body {
     margin-right: 2em;
     margin-bottom: 2em;
     cursor: pointer;
-    background-color: rgba(255,255,255,0);
+    background-color: #fff;
     font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -73,12 +77,13 @@ body {
   }
 
   .btn:hover {
-    background-color: rgba(255,255,255,0.15);
+    background-color: #92a7a4;
     opacity: 1;
     letter-spacing: 0.2em;
+    color: white;
   }
 
 
 .btn:hover {
-    border-color: black;
+    border-color: #788482;
 }
