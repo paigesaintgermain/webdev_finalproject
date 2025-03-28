@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Sheriff In Town</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="js/app.js"></script>
+  </head>
+  <body class="start">
+    <div id="buttons">
+        <p id="start-button"><button class="btn" onclick="formDialog.showModal()">Well, partner, saddle up!</button></p>
+        <p><button class="btn" onclick="viewPreviousSaves()">View Previous Saves</button></p>
+    </div>
+    
+    <dialog id="form-container">
+      <h1 class="wiggle">Howdy Partner!</h1>
+      <form>
+          <div>
+              <button type="button" onclick="randomName()" >
+                  <img class="button-icon" style="height: 1rem;" src="./images/shuffle-solid.svg" >
+              </button>
+              <div class="character-input">
+                  <label for="character-name">What's your name?</label>
+                  <input type="text" id="character-name" placeholder="" required oninput="showNameCharLength()"/>
+              </div>
+              <button type="button" class="gender-select male-button" onclick="pickGender(this, 'male')" >
+                  <img class="button-icon" style="height: 1rem;" src="./images/mars-solid.svg" >
+              </button>
+              <button type="button" class="gender-select female-button" onclick="pickGender(this, 'female')" >
+                  <img class="button-icon" style="height: 1rem;" src="./images/venus-solid.svg" >
+              </button>
+              <button type="button" class="gender-select non-binary-button" onclick="pickGender(this, 'non-binary')" >
+                  <img class="button-icon" style="height: 1rem;" src="./images/transgender-solid.svg" >
+              </button>
+          </div>
+          <div class="verify-and-submit">
+              <p id="dialog-text-change"></p>
+              <button type="button" id="finalize-character" onclick="finalizeCharacter()">Done</button>
+          </div>
+      </form>
+    </dialog>
+
+    <dialog id="previous-saves">
+        <div class="prev-saves-header">
+            <h2>Previous Saves:</h2>
+            <button class="btn" onclick="closeSavesDialog()">X</button>
+        </div>
+        <div id="saves-list"></div>
+    </dialog>
+
+    <div id="start">
+      <p>Name:</p>
+      <p id="character-name-verify"></p>
+      <br/>
+      <p>Gender:</p>
+      <p id="character-gender-verify"></p>
+      <p><a class="btn" id="go-button" href="game.html">GO</a></p>
+    </div>
+  </body>
+</html>

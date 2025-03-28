@@ -1,0 +1,1 @@
+Thank you to Font Awesome for the icon SVGs!
