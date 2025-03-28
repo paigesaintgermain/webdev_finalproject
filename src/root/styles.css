@@ -147,7 +147,8 @@ form button:hover {
 
 #buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 #previous-saves {
@@ -259,5 +260,11 @@ a::btn {
         grid-template-columns: repeat(2, auto);
         gap: 10px;
         margin-top: 20px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
     }
 }
