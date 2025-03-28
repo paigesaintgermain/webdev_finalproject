@@ -1,5 +1,9 @@
 # webdev_finalproject
 
+Welcome to Rusty Spur, a dusty frontier town where you, the new sheriff, are on a mission to bring justice to the Wild West! The notorious One-Eyed Bill is wanted for murder, but as you chase him down through saloons, gold mines, and general stores, you quickly realize things ain’t always what they seem. With a cast of quirky townsfolk—including a jittery bartender, a drunk named Old Gus, and the accident-prone Tumbleweed Tim—you’ll have to navigate rumors, wild chases, and ridiculous feuds to uncover the truth. Is Bill really a cold-blooded killer, or is this all one big, hilarious misunderstanding? The fate of Rusty Spur rests in your hands, Sheriff—so saddle up and choose wisely!
+
+New Sheriff in town is a "create your own adventure" story using HTML, CSS, and Javascript. This is the final project in the Web Development course offered by Code:You.
+
 - The main page is served by the API. To run the API and see the page, perform the following steps:
     - Open a console at the same folder as the package.json
     - Run `npm install` to get the node packages
