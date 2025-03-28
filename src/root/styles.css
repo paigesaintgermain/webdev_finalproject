@@ -212,8 +212,8 @@ a::btn {
 }
 
 .btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-top: 20px;
 }
@@ -252,29 +252,12 @@ a::btn {
     border-color: #788482;
 }
 
-@keyframes wiggle {
-    10% {
-        transform: rotate(0deg);
-    }
-    20% {
-        transform: rotate(5deg);
-    }
-    30% {
-        transform: rotate(-5deg);
-    }
-    40% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    60% {
-        transform: rotate(-5deg);
-    }
-    70% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(0deg);
+/* Tablet */
+@media (min-width: 769px) { 
+    .btn-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+        margin-top: 20px;
     }
 }
